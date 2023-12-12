@@ -69,7 +69,7 @@ public class AuthController {
         if(jwtUtil.getPermission(token) == 0) {
             UserResponseDTO res = new UserResponseDTO();
             res.setMessage("Usuario no autorizado.");
-            res.setCode(0);
+            res.setCode(1);
             return new ResponseEntity<>(res, HttpStatus.UNAUTHORIZED);
         }
 

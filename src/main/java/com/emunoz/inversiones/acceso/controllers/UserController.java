@@ -66,15 +66,15 @@ public class UserController {
     }
 
     //-------------------
-    @Operation(summary = "Servicio que lista un usuario")
+    @Operation(summary = "Servicio que lista un usuario.")
     @ApiResponses(
             value = {
-                    @ApiResponse(responseCode = "200", description = "Usuario encontrado", content = {
+                    @ApiResponse(responseCode = "200", description = "Usuario encontrado.", content = {
                             @Content(mediaType = "application/json", schema = @Schema(implementation = List.class))
                     }),
-                    @ApiResponse(responseCode = "204", description = "No se encontro el usuario", content = @Content),
-                    @ApiResponse(responseCode = "500", description = "Error interno del servidor", content = @Content),
-                    @ApiResponse(responseCode = "401", description = "Error ide autorización", content = @Content),
+                    @ApiResponse(responseCode = "204", description = "No se encontro el usuario.", content = @Content),
+                    @ApiResponse(responseCode = "500", description = "Error interno del servidor.", content = @Content),
+                    @ApiResponse(responseCode = "401", description = "Error de autorización.", content = @Content),
             }
     )
     @GetMapping (path = "{usuarioId}")
@@ -111,7 +111,10 @@ public class UserController {
     @PostMapping
     public ResponseEntity<UserResponseDTO> createUser(@Validated @RequestBody UserRequestDTO userRequest, BindingResult bindingResult) {
 
-
+        ResponseEntity<UserResponseDTO> validationError = validationUtils.handleValidationErrors(bindingResult);
+        if (validationError != null) {
+            return validationError;
+        }
 
         UserResponseDTO res = userService.createUser(userRequest);
 
