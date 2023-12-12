@@ -38,8 +38,8 @@ public class UserServiceImpl implements UserService {
     public UserResponseDTO getUsersAll() {
         UserResponseDTO userResponse = new UserResponseDTO();
 
-        List<UserEntity> userEntitiesEntities = userRepository.findAll();
-        List<UserDataResponseDTO> userDataResponseDTOs = userEntitiesEntities.stream()
+        List<UserEntity> userEntities = userRepository.findAll();
+        List<UserDataResponseDTO> userDataResponseDTOs = userEntities.stream()
                 .map(userEntity -> {
                     UserDataResponseDTO dto = UserMapper.toResponseDTO(userEntity);
 
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
                 })
                 .collect(Collectors.toList());
 
-        if (userEntitiesEntities.isEmpty()) {
+        if (userEntities.isEmpty()) {
             userResponse.setMessage("No hay usuarios registrados.");
             userResponse.setCode(1);
             return userResponse;

@@ -1,6 +1,5 @@
 package com.emunoz.inversiones.acceso.repositry;
 
-import com.emunoz.inversiones.acceso.models.entity.RevokedTokenEntity;
 import com.emunoz.inversiones.acceso.models.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

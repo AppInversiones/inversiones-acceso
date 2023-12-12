@@ -141,23 +141,4 @@ public class JWTUtil {
 
     }
 
-
-
-    public void verifyToken(String jwt) {
-        try {
-            Claims claims = Jwts.parser()
-                    .setSigningKey(DatatypeConverter.parseBase64Binary(key))
-                    .parseClaimsJws(jwt)
-                    .getBody();
-
-            String id = claims.getId();
-            String email = claims.getSubject();
-            String permission = claims.get("permission", String.class);
-
-            // Mostrar valores del token
-
-        } catch (JwtException ex) {
-
-        }
-    }
 }

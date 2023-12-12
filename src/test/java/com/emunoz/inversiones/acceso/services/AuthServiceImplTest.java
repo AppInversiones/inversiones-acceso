@@ -1,6 +1,5 @@
 package com.emunoz.inversiones.acceso.services;
 
-import com.emunoz.inversiones.acceso.models.entity.RevokedTokenEntity;
 import com.emunoz.inversiones.acceso.models.entity.RoleEntity;
 import com.emunoz.inversiones.acceso.models.entity.UserEntity;
 import com.emunoz.inversiones.acceso.models.loginRequest.LoginRequestDTO;

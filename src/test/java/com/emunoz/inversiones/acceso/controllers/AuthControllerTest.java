@@ -2,11 +2,9 @@ package com.emunoz.inversiones.acceso.controllers;
 
 import com.emunoz.inversiones.acceso.Validation.ValidationUtils;
 import com.emunoz.inversiones.acceso.models.loginRequest.LoginRequestDTO;
-import com.emunoz.inversiones.acceso.models.request.UserRequestDTO;
 import com.emunoz.inversiones.acceso.models.response.UserLoginResponseDTO;
 import com.emunoz.inversiones.acceso.models.response.UserResponseDTO;
 import com.emunoz.inversiones.acceso.services.AuthServices;
-import com.emunoz.inversiones.acceso.services.UserService;
 import com.emunoz.inversiones.acceso.util.JWTUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

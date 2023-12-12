@@ -75,10 +75,9 @@ public class AuthServicesImpl implements AuthServices {
 
     @Override
     public UserResponseDTO logoutService(String token) {
-        // Esta lista almacenaría los tokens inválidos o revocados
         UserResponseDTO userResponse = new UserResponseDTO();
 
-            // Agregar el token a la lista de tokens inválidos
+        // Agregar el token a la lista de tokens inválidos
         RevokedTokenEntity revokedTokenEntity = UserMapper.toRevokesToken(token);
         logoutRepository.save(revokedTokenEntity);
 

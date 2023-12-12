@@ -2,7 +2,6 @@ package com.emunoz.inversiones.acceso.userMapper;
 
 import com.emunoz.inversiones.acceso.models.entity.RevokedTokenEntity;
 import com.emunoz.inversiones.acceso.models.entity.UserEntity;
-import com.emunoz.inversiones.acceso.models.loginRequest.RevokedTokenRequestDTO;
 import com.emunoz.inversiones.acceso.models.request.UserRequestDTO;
 import com.emunoz.inversiones.acceso.models.response.UserDataResponseDTO;
 
@@ -31,7 +30,10 @@ public class UserMapper {
     }
 
     public static RevokedTokenEntity toRevokesToken(String token) {
-        return new RevokedTokenEntity(token);
+        RevokedTokenEntity revokedTokenEntity = new RevokedTokenEntity();
+        revokedTokenEntity.setToken(token);
+
+        return revokedTokenEntity;
 
     }
 

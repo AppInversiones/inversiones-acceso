@@ -27,6 +27,9 @@ public class RevokedTokenEntity {
     @Column(name = "revocationTime")
     private LocalDateTime revocationTime;
 
-    public RevokedTokenEntity(String token) {
+    @PrePersist
+    protected void onCreate() {
+        revocationTime = LocalDateTime.now();
     }
+
 }
