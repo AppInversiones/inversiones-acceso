@@ -62,7 +62,7 @@ para examinar la base de datos entrar al link siguiente una vez levantado el ser
 
 - http://localhost:8080/h2-console
 
-## Para las pruebas en Postman se podr aimportar la coleecion de las siguiente dirección:
+## Para las pruebas en Postman se podra importar la coleccion de las siguiente dirección:
 
 - https://api.postman.com/collections/20444141-702393e7-8f71-4ff3-94c4-169f9e86c15a?access_key=PMAT-01HGXJKR0Z5SQ6C6WTZ496QJ7E
 

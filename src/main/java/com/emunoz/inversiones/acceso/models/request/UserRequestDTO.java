@@ -15,7 +15,8 @@ public class UserRequestDTO {
     @Size(max = 20)
     private String name;
 
-    @NotBlank(message = "El email no debe estar vacío")
+    @NotNull
+    @Pattern(regexp = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,6}$", message = "Formato de correo electrónico no válido")
     private String email;
 
     @NotBlank(message = "El password no debe estar vacío")
